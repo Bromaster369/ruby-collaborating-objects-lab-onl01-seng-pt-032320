@@ -11,7 +11,7 @@ class MP3Importer
     @files ||= Dir.glob("#{path}/*.mp3").collect{ |file| file.gsub("#{path}/", "") }
   end
   
-  def self.import 
+  def import 
     files.each {|song| Song.new_by_file_name(song)}
   end
   
