@@ -8,7 +8,7 @@ class MP3Importer
   end
   
   def self.files 
-    Dir[@path+"/*.mp3"].map { |song| song.split("/").last} 
+    Dir[@path+"/*.mp3"].map { |file| file.split("/").last} 
   end
   
   def self.import 
